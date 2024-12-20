@@ -1,0 +1,35 @@
+[project]
+name = "llama-from-scratch"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "Robin Ghyselinck", email = "rghyselinck@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.5.1",
+    "sentencepiece>=0.2.0",
+    "tqdm>=4.67.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.8.4",
+]
+
+[tool.ruff]
+select = [
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "B",  # flake8-bugbear
+    "I",  # isort
+]
+line-length = 88
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
