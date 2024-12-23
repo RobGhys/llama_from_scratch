@@ -1,2 +1,3 @@
 # Project exclude paths
 /.venv/
+/Llama-2-7b/
